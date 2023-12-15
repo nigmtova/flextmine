@@ -1,0 +1,529 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Prosto+One&display=swap');
+*{
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 40px;
+    background: url("../img/decor.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+.navbar_in{
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar ul li{
+    color: #CACACA;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 25px;
+}
+.eng_lan h2{
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    margin-left: 5px;
+}
+.eng_lan{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.lang_arrow{
+    color: white;
+    margin-left: 7px;
+    transition: 0.5s;
+}
+.navbar_in button{
+    width: 207px;
+    height: 47px;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(2deg, #0B729F -108.41%, #7302EE -12.71%, #00B3FF 98.62%, #03B0FB 98.62%);
+}
+.for_eng_lan h2{
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    margin-left: 5px;
+}
+.for_eng_lan{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#for_eng_lan{
+    margin-bottom: 10px;
+}
+.languages{
+    position: relative;
+}
+.for_lang_bottom{
+    transition: 1s;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    background-color: #16151C;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 11111;
+}
+.for_none_lang{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 20px;
+    display: none;
+}
+.navbar_manu{
+    font-size: 30px;
+    color: white;
+    display: none;
+}
+.logo2{
+    display: none;
+}
+.bottom_header{
+    overflow: hidden;
+    background: #16151C;
+    color: white;
+    min-height: 600px;
+}
+.bottom_header_card{
+    position: relative;
+    z-index: 111;
+    max-width: 607px;
+    width: 100%;
+    padding: 15px;
+}
+.bottom_header_card h2{ 
+    font-family: 'Inter', sans-serif;
+font-family: 'Prosto One', sans-serif;
+font-size: 48px;
+}
+.bottom_header_center{
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+}
+.bottom_header_p1{
+    max-width: 607px;
+    color: #CACACA;
+    width: 95%;
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 23px;
+}
+.bottom_header_p2{
+    color:#949EFD;
+    margin-top: 50px;
+}
+.bottom_header_center{
+    display: flex;
+    align-items: center;
+}
+.bottom_header{
+    padding-top: 50px;
+    position: relative;
+}
+.bottom_header_p2 {
+    background: linear-gradient(to right, #949EFD, #954FFF, #BB70FF, #56A4FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bottom_header_img1{
+    position: absolute;
+    right: -12vw;
+    bottom: 0;
+    width: 50vw;
+}
+.for_right_images{
+    position: relative;
+}
+.hosting1{
+    position: relative;
+    z-index: 1111;
+    width: 31vw;
+}
+#img11{
+    display: none;
+}
+.roadmap{
+    background: linear-gradient(to right, #7623D4, 0%, #16151C 60%);
+    min-height: 840px;
+    
+}
+.roadmap_h1{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Prosto One', sans-serif;
+    color: #FFF;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.road_map_card{
+    color: white;
+    z-index: 1111;
+}
+.road_map_card1{
+    position: relative;
+}
+.road_map_card h3{
+    font-family: 'Inter', sans-serif;
+font-family: 'Prosto One', sans-serif;
+color: #FFF;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 10px;
+}
+
+.road_map_card h5{
+    color: white;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 10px;
+}
+.road_map_card{
+    margin-right: 15px;
+    padding: 15px;
+    width: 400px;
+    min-height: 468px;
+    border-radius: 20px;
+border: 2px solid #563C72;
+background: linear-gradient(143deg, rgba(13, 13, 13, 0.14) 1.25%, rgba(120, 95, 135, 0.16) 79.53%);
+backdrop-filter: blur(5.449999809265137px);
+}
+.road_map_card p{
+    margin-top: 20px;
+    line-height: 23px;
+}
+.road_for_flex{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+.dot{
+    width: 18px;
+    height: 9px;
+    background-color: white;
+    border-radius: 50%;
+}
+.road_map_card1 h2{
+    font-family: 'Inter', sans-serif;
+font-family: 'Prosto One', sans-serif;
+    text-align: center;
+font-size: 124.898px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+position: absolute;
+left: 10px;
+top: -90px;
+text-shadow: 0px 0px 2px #C58FFF !important;
+    color: #16151C !important;
+}
+.roadmap_cards{
+    display: flex;
+    padding-top: 140px;
+    overflow-x: scroll !important;
+    padding-bottom: 30px;
+}
+.roadmap_cards::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 40px;
+    height: 12px;
+  }
+  
+  /* Track */
+  .roadmap_cards::-webkit-scrollbar-track {
+    background: linear-gradient(#B6C4DC, #00000000);
+    border-radius: 40px;
+  }
+  
+  /* Handle */
+  .roadmap_cards::-webkit-scrollbar-thumb {
+    background: linear-gradient(#7623D4, #B388E1) ;
+    border-radius: 40px;
+  }
+
+  .how_start{
+    min-height: 730px;
+    background-color: #16151C;
+  }
+  .how_start h1{
+    color: #FFF;
+text-align: center;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+font-family: 'Inter', sans-serif;
+font-family: 'Prosto One', sans-serif;
+  }
+
+.road_map_cent{
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+}
+.how_start h6{
+        background: linear-gradient(to right, #949EFD, #954FFF, #BB70FF, #56A4FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 15px;
+}
+.how_start_card{
+    padding: 15px;
+    max-width: 32%;
+    min-height: 417px;
+    width: 100%;
+    border-radius: 20px;
+border: 2px solid #CA9CFC;
+background: linear-gradient(347deg, rgba(13, 13, 13, 0.14) 17.92%, rgba(120, 95, 135, 0.16) 80.79%);
+backdrop-filter: blur(23.149999618530273px);
+}
+.how_start_card img{
+    display: flex;
+    margin: auto;
+}
+.how_start_card p{
+    color: #FFF;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 15px;
+line-height: 25px;
+}
+.how_start_cards{
+    max-width: 1300px;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+@media(max-width:800px){
+    .bottom_header_center{
+        display: block;
+    }
+    .bottom_header_p2{
+        margin-top: 10px;
+    }
+    .for_right_images{
+        margin-top: 20px;
+    }
+    .hosting1{
+        width: 50vw;
+    }
+    .bottom_header_img1{
+        width: 70vw;
+    }
+    .bottom_header_p1{
+        width: 100%;
+    }
+    .bottom_header_img1{
+        left: 0;
+    }
+}
+@media(max-width:1000px){
+    .how_start_card{
+        max-width: 48%;
+    }
+    .bottom_header_p1{
+        font-size: 14px;
+    }
+    .bottom_header_card h2{
+        font-size: 38px;
+    }
+    .bottom_header_p2{
+        font-size: 14px;
+    }
+}
+@media(max-width:700px){
+    .how_start_card{
+        max-width: 100%;
+    }
+}
+@media(max-width:480px){
+    .logo2{
+        display: flex;
+    }
+    .logo1{
+        display: none;
+    }
+    .road_map_card{
+        width: 93vw;
+    }
+    .how_start h1{
+        font-size: 35px;
+    }
+    .how_start h6{
+        font-size: 15px;
+    }
+    .roadmap_h1{
+        font-size: 28px;
+    }
+}
+@media(max-width:560px){
+    .navbar_in button{
+        width: 140px;
+        height: 30px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+    #img11{
+        display: flex;
+    }
+    .bottom_header_img1{
+        display: none;
+        right: auto;
+    }
+    .for_right_images{
+        overflow: hidden;
+    }
+    .hosting1{
+        width: 100%;
+    }
+    .bottom_header_img1{
+        width: 100vw;
+    }
+    .logo1{
+        width: 200px;
+    }
+}
+@media(max-width:1200px){
+    .navbar_ul{
+        display: none !important;
+    }
+    .languages{
+        display: none;
+    }
+    .navbar_manu{
+        display: flex;
+    }
+}
+@media(min-width:1440px){
+    .road_map_cent{
+        max-width: 90vw;
+    }
+    .road_map_card h5{
+        font-size: 18px;
+    }
+    .road_map_card p{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .bottom_header_p1{
+        width: 100%;
+        max-width: max-content;
+        font-size: 1.2vw;
+        line-height: 1.6vw;
+    }
+    .bottom_header_p2{
+        font-size: 1.2vw;
+        margin-top: 2vw;
+    }
+    .bottom_header_card{
+        max-width: 42vw;
+    }
+    .bottom_header_card h2{
+        font-size: 3vw;
+    }
+    .bottom_header_center{
+        max-width: 90vw;
+    }
+    .bottom_header_img1{
+        width: 45vw;
+        top: 0;
+        right: -8vw;
+    }
+    .hosting1{
+        margin-left: 2vw;
+    }
+    .for_right_images{
+        max-width: max-content;
+        width: auto;
+    }
+    .for_lang_bottom{
+        top: 2vw;
+    }
+    .navbar{
+        height: 6vw;
+    }
+    .navbar_in{
+        max-width: 90vw;
+    }
+    .logo1{
+        width: 18vw;
+    }
+    .navbar ul li{
+        font-size: 1.2vw;
+    }
+    .rus{
+        width: 2vw;
+    }
+    .which_lang{
+        font-size: 1.2vw !important;
+        margin-left: 0.4vw !important; 
+    }
+    .lang_arrow{
+        font-size: 1vw;
+    }
+}
+@media(max-width:430px){
+    .road_map_card{
+        width: 92vw;
+    }
+}
+@media(max-width:380px){
+    .road_map_card{
+        width: 91vw;
+    }
+}
+@media(max-width:340px){
+    .road_map_card{
+        width: 90vw;
+    }
+}
