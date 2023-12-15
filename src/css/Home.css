@@ -16,6 +16,8 @@
     display: flex;
     align-items: center;
     padding: 15px;
+    position: relative;
+    z-index: 111;
 }
 .navbar_in{
     max-width: 1400px;

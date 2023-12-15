@@ -4,6 +4,21 @@
     margin: 0px;
 }
 .header_top{
+    overflow: hidden;
+    min-height: 900px;
+    justify-content: center;
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+    position: relative;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap: 30px;
+
+}
+.for_header_cent{
+    overflow: hidden;
     min-height: 900px;
     width: 100%;
     position: relative;
@@ -11,18 +26,16 @@
 display: flex;
 align-items: center;
 flex-wrap: wrap;
-justify-content: center;
 gap: 13px;
-
 }
 .idea_img{
     position: absolute;
-    right: 0;
+    right: -10vw;
     top: -15vw;
     width: 50vw;
 }
 .text_a{
-    width: 44%;
+    width: 48%;
     
 }
 
@@ -86,7 +99,7 @@ color: white;
     color: white;
 }
 .button_com1{
-    width: 46%;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -143,15 +156,15 @@ padding-top: 20px;
    background-color: #cc9dff3a;
 backdrop-filter: blur(30px);
 border: 2px solid #AF85DC;
-width: 30%;
-min-width: 300px;
+/* max-width: 594px; */
+width: 42%;
 /* height:500px; */
 border-radius: 10px;
 min-height: 600px;
 }
 .header_stats{
     display: flex;
-    max-width: 300px;
+    max-width: 400px;
     justify-content: space-around;
     margin: auto;
     text-align: center;
@@ -301,7 +314,7 @@ color: white;
 @media (max-width:1456px) {
     .text_com{
         font-size: 18px;
-        width: 45%;
+        width: 48%;
     }
     
 }
@@ -402,5 +415,44 @@ color: white;
         font-size: 20px;
        } */
 }
-
+@media(min-width:1440px){
+    .header_stats h5{
+        font-size: 2.5vw !important;
+    }
+    .credit_a h2{
+        font-size: 3vw;
+    }
+    .header_stats{
+        margin-top: 40px;
+    }
+    .header_stats{
+        max-width: 25vw;
+    }
+    .header_stats h6{
+        font-size: 1.5vw;
+        margin-top: 0.8vw;
+    }
+    .line2_a{
+        height: 0.9vw;
+    }
+    .line1_a{
+        height: 1vw;
+    }
+    .opatext{
+        font-size: 1vw;
+        margin-top: 1.2vw;
+        margin-bottom: 0.8vw;
+    }
+    .opa_2a{
+        font-size: 1vw;
+        margin-top: 1vw;
+    }
+    .fantasiy h1{
+        font-size: 1vw;
+        font-weight: 400;
+    }
+    .Header_fantasiy h3{
+        font-size: 1vw;
+    }
+}
 
