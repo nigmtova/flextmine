@@ -32,7 +32,14 @@ import telegram from '../img/telegram.svg'
 import Whatsapp from '../img/whatsap.png'
 import map from '../img/map.svg'
 import karta from '../img/karta.png'
-
+import { IoClose } from "react-icons/io5";
+import img9 from "../img/ellips.png"
+import img10 from "../img/whatsapp.png";
+import img11 from "../img/image 67.png";
+import img12 from "../img/image 67 (1).png";
+import img13 from "../img/image 68.png";
+import img14 from "../img/image 64.png";
+import telegram1 from "../img/telegram.png";
 
 
 export default function Home() {
@@ -47,14 +54,36 @@ export default function Home() {
         document.querySelector(".lang_arrow").style="transform: rotate(0deg);"
     }
 
+    function menuicon() {
+        document.querySelector(".nav_box2").style = "position: fixed; top:0; left:0; transition: 0.5s;"
+    }
+
+    function close2() {
+        document.querySelector(".nav_box2").style = "position: absolute; left:-900px; transition: 1s;"
+    }
+
 
 
   return (
-    <div>
+    <div style={{background:"#16151C", overflow:"hidden"}}>
         <div className="Home_main">
             <div className="navbar">
                 <div className="navbar_in">
-                <IoMenuSharp className='navbar_manu' />
+                    <div className="nav_box2">
+                        <div className="nav2_card">
+                            <img className='logo1' src={Logo} alt="" />
+                            <IoClose className='close2' onClick={()=> close2()}/>
+                        </div>
+                        {/* <img className='logo2' src={Logo2} alt="" /> */}
+                        <ul className='navbar_ul2'>
+                            <li onClick={()=>window.location="#roadmap"}>Roadmap</li>
+                            <li>Tokenomics</li>
+                            <li>FAQ</li>
+                            <li>Contact</li>
+                            <li>Whitepaper</li>
+                        </ul>
+                    </div>
+                <IoMenuSharp className='navbar_manu' onClick={()=> menuicon()}/>
                 <img className='logo1' src={Logo} alt="" />
                 <img className='logo2' src={Logo2} alt="" />
                 <ul className='navbar_ul'>
@@ -308,6 +337,230 @@ Expansion of the network of strategic partnerships to strengthen the platform.
                     </div>
                 </div>
             </div>
+            <div className="tokenomix">
+        <div className="main2_div">
+          <div className="Sub_div">
+            <div className="p_mini">
+              <h1>Tokenomics</h1>
+              <p>
+                FlexiMine's tokenomics are designed to ensure long-term
+                sustainability and investment appeal while simultaneously
+                fostering active participation and community support. The token
+                distribution is as follows:
+              </p>
+            </div>
+          </div>
+          <div className="cards_div">
+            <div className="more_div2">
+              <img src={img9} alt="" />
+            </div>
+            <div className="texts_div">
+              <div className="mini_hs">
+                <div className="h_div">
+                  <div className="mini_cb" />
+                </div>
+                <p>
+                  <span style={{ fontWeight: "400" }}>
+                    35% (1,400,000,000 tokens) Mining Investments:
+                  </span>{" "}
+                  These funds will be utilized to expand and upgrade FlexiMine's
+                  mining capacities, including acquiring new equipment and
+                  improving infrastructure.
+                </p>
+              </div>
+              <div className="mini_hs">
+                <div className="h_div">
+                  <div className="mini_cb" style={{ background: "#FF04FA" }} />
+                </div>
+                <p>
+                  <span style={{ fontWeight: "400" }}>
+                    25% (1,000,000,000 tokens) Platform Development:
+                  </span>
+                  This portion of tokens is allocated for innovation and
+                  technological advancement, ensuring the continuous enhancement
+                  of the FlexiMine platform and strengthening its market
+                  presence.
+                </p>
+              </div>
+              <div className="mini_hs">
+                <div className="h_div">
+                  <div className="mini_cb" />
+                </div>
+                <p>
+                  <span style={{ fontWeight: "400" }}>
+                    35% (1,400,000,000 tokens) Mining Investments:
+                  </span>{" "}
+                  These funds will be utilized to expand and upgrade FlexiMine's
+                  mining capacities, including acquiring new equipment and
+                  improving infrastructure.
+                </p>
+              </div>
+              <div className="mini_hs">
+                <div className="h_div">
+                  <div className="mini_cb" />
+                </div>
+                <p>
+                  <span style={{ fontWeight: "400" }}>
+                    35% (1,400,000,000 tokens) Mining Investments:
+                  </span>{" "}
+                  These funds will be utilized to expand and upgrade FlexiMine's
+                  mining capacities, including acquiring new equipment and
+                  improving infrastructure.
+                </p>
+              </div>
+            </div>
+            <div className="more_div">
+              <img src={img9} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="contact_map"
+        style={{
+          background: "linear-gradient(to right, #1d1430, 25%, #16151c 80%)",
+        }}
+      >
+        <div className="main2_div">
+          <div className="contact_center">
+            <h1>Team & Advisors</h1>
+            <p>
+              See for yourself that FlexiMine is People-centered and
+              Trustworthy. Understand how our system works. Transparent and
+              Safe. it's about the people in front and their experience and
+              knowledge
+            </p>
+          </div>
+          <div className="roadmap_cards">
+            <div className="road_map_card1" style={{ paddingLeft: 10 }}>
+              <div className="image_contact">
+                <img src={img14} alt="" />
+              </div>
+              <div className="Contacts_div">
+                <div className="hash"><h3>Светлана С.</h3>
+                  <p>Руководитель блокчейна</p>
+                </div>
+                <div className="gh">
+                  <div className="Hash_tag">
+                    <img src={telegram1} alt="" />
+                    <img src={img10} alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="road_map_card1" style={{ paddingLeft: 10 }}>
+              <div className="image_contact">
+                <img src={img11} alt="" />
+              </div>
+              <div className="Contacts_div">
+                <div className="hash">
+                  <h3>Артур К.</h3>
+                  <p>Директор</p>
+                </div>
+                <div className="Hash_tag">
+                  <img src={img10} alt="" />
+                  <img src={telegram1} alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div className="road_map_card1" style={{ paddingLeft: 10 }}>
+              <div className="image_contact">
+                <img src={img12} alt="" />
+              </div>
+              <div className="Contacts_div">
+                <div className="hash">
+                  <h3>Екатерина С.</h3>
+                  <p>Технический аналитик</p>
+                </div>
+                <div className="Hash_tag">
+                  <img src={telegram1} alt="" />
+                  <img src={img10} alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div className="road_map_card1" style={{ paddingLeft: 10 }}>
+              <div className="image_contact">
+                <img src={img13} alt="" />
+              </div>
+              <div className="Contacts_div">
+                <div className="hash">
+                  <h3>Филипп Т.</h3>
+                  <p>Руководитель отдела развития и партнерства</p>
+                </div>
+                <div className="Hash_tag">
+                  <img src={telegram1} alt="" />
+                  <img src={img10} alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div className="road_map_card1" style={{ paddingLeft: 10 }}>
+              <div className="image_contact">
+                <img src={img14} alt="" />
+              </div>
+              <div className="Contacts_div">
+                <div className="hash">
+                  <h3>Светлана С.</h3>
+                  <p>Руководитель блокчейна</p>
+                </div>
+                <div className="Hash_tag">
+                  <img src={telegram1} alt="" />
+                  <img src={img10} alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div className="road_map_card1" style={{ paddingLeft: 10 }}>
+              <div className="image_contact">
+                <img src={img11} alt="" />
+              </div>
+              <div className="Contacts_div">
+                <div className="hash">
+                  <h3>Артур К.</h3>
+                  <p>Директор</p>
+                </div>
+                <div className="Hash_tag">
+                  <img src={telegram1} alt="" />
+                  <img src={img10} alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div className="road_map_card1" style={{ paddingLeft: 10 }}>
+              <div className="image_contact">
+                <img src={img12} alt="" />
+              </div>
+              <div className="Contacts_div">
+                <div className="hash">
+                  <h3>Екатерина С.</h3>
+                  <p>Технический аналитик</p>
+                </div>
+                <div className="Hash_tag">
+                  <img src={telegram1} alt="" />
+                  <img src={img10} alt="" />
+                </div>
+              </div>
+            </div><div className="road_map_card1" style={{ paddingLeft: 10 }}>
+              <div className="image_contact">
+                <img src={img13} alt="" />
+              </div>
+              <div className="Contacts_div">
+                <div className="hash">
+                  <h3>Филипп Т.</h3>
+                  <p>Руководитель отдела развития и партнерства</p>
+                </div>
+                <div className="Hash_tag">
+                  <img src={telegram1} alt="" />
+                  <img src={img10} alt="" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
             <div className="for_back_faq">
             <section className='faq' id='Faq'>
             <div className="faq_h1">
@@ -401,6 +654,7 @@ Expansion of the network of strategic partnerships to strengthen the platform.
             </div>
           </section>
           </div>
+
           <div className="for_footer">
             <div className="for_footer_cent">
             <div className="for_footer_card">
