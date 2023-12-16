@@ -22,10 +22,23 @@ import img5 from "../image/Group 1000003496.png"
 import img6 from "../image/FXM.png"
 import img7 from "../image/Icon.png"
 import img8 from "../image/Icon (1).png"
+import faq from '../img/hodlbot.png'
+import vk from '../img/vk.svg'
+import insta from '../img/insta.png'
+import mail from '../img/mail.png'
+import phone from '../img/phone.png'
+import youtube from '../img/youtube.png'
+import telegram from '../img/telegram.svg'
+import Whatsapp from '../img/whatsap.png'
+import map from '../img/map.svg'
+import karta from '../img/karta.png'
 
 
 
 export default function Home() {
+    // function accord() {
+
+    // }
     function ang_lang() {
         document.querySelector(".for_lang_bottom").style="display:block"
         document.querySelector(".for_none_lang").style="display:block"
@@ -40,7 +53,7 @@ export default function Home() {
 
 
   return (
-    <div>
+    <div style={{background:"#17161E", overflow:"hidden"}}>
         <div className="Home_main">
             <div className="navbar">
                 <div className="navbar_in">
@@ -296,6 +309,100 @@ Expansion of the network of strategic partnerships to strengthen the platform.
                     </div>
                 </div>
             </div>
+
+          <section className='faq' id='Faq'>
+            <div className="faq_h1">
+                <h1>Frequently Asked Questions</h1>
+            </div>
+
+            <div className="accordion">
+                <div className="faq_blue"></div>
+                <div className="faq_pink"></div>
+                <div className="faq_purple"></div>
+                <div className="contentBx">
+                    <div className="label">What is FlexiMine?</div>
+                    <div className="content">
+                        <p>FlexiMine is an innovative platform for cryptocurrency mining and staking, combining the advantages of cloud mining with artificial intelligence. Users can choose cryptocurrencies for mining, such as Bitcoin or Dogecoin, and participate in staking. It is also possible to use AI for automatically selecting the most profitable options for mining and staking.</p>
+                    </div>
+                </div>
+
+                <div className="contentBx">
+                    <div className="label">How can I buy FXM tokens?</div>
+                    <div className="content2">
+                        <p>FXM tokens are available for purchase on our official website fleximine.com using cryptocurrencies such as USDT or Ethereum.</p>
+                    </div>
+                </div>
+
+                <div className="contentBx">
+                    <div className="label">What makes FlexiMine unique?</div>
+                    <div className="content3">
+                        <p>FlexiMine offers a unique mining opportunity by using any cryptocurrency as mining power under collateral. This innovation is a first in the crypto industry.</p>
+                    </div>
+                </div>
+
+                <div className="contentBx">
+                    <div className="label">How does staking work in FlexiMine?</div>
+                    <div className="content4">
+                        <p>In FlexiMine, users can stake any cryptocurrency that supports staking, within a unified ecosystem.</p>
+                    </div>
+                </div>
+
+                <div className="contentBx">
+                    <div className="label">What are the benefits for FXM presale participants?</div>
+                    <div className="content5">
+                        <p>Participants in the presale will receive a lifetime bonus in mining power, which will be individually calculated after the end of the presale.</p>
+                    </div>
+                </div>
+
+                <div className="contentBx">
+                    <div className="label">How does FlexiMine ensure security and transparency?</div>
+                    <div className="content6">
+                        <p>FlexiMine utilizes state-of-the-art security technologies and provides users with full control over their investments and mining activities.</p>
+                    </div>
+                </div>
+            </div>
+            <div className="faq_right_img">
+                <div className="faq_dark_purple"></div>
+                <img src={faq} alt="" />
+            </div>
+          </section>
+
+          <section className="contact" id='cont'>
+            <div className="cont_h1">
+                <h1>Our contacts</h1>
+            </div>
+            <div className="cont_box">
+                <div className="cont_left">
+                    <div className="cont_blue"></div>
+                    <div className="cont_pink"></div>
+                    <div className="cont_left_min">
+                        <div className="cont_links">
+                            <div className="cont_links_p"><img src={phone} alt="" /><p>+7 937 352-27-75</p></div>
+                            <div className="cont_links_p"><img src={mail} alt="" /><p>FlexiMine@gmail.com</p></div>
+                            <div className="cont_links_p"><img src={map} alt="" /><p>г. Москва, м.Красносельская, ул. Гаврикова 2\38</p></div>
+                        </div>
+
+                        <div className="cont_links2">
+                            <p>Telegram</p>
+                            <p>Whatsapp</p>
+                            <p>Viber</p>
+                        </div>
+                    </div>
+                    <div className="cont_links3">
+                        <p>Наши соц сети:</p>
+                        <img src={vk} alt="" />
+                        <img src={insta} alt="" />
+                        <img src={telegram} alt="" />
+                        <img src={Whatsapp} alt="" />
+                        <img src={youtube} alt="" />
+                    </div>
+                </div>
+
+                <div className="cont_right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.7392188735275!2d37.665886481691636!3d55.78040093041076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5358176aa7301%3A0x2c849191559e3ae!2z0YPQuy4g0JPQsNCy0YDQuNC60L7QstCwLCAyLzM4LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTA3MTQw!5e0!3m2!1sru!2s!4v1702707635920!5m2!1sru!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+          </section>
         </div>
     </div>
   )
