@@ -315,7 +315,7 @@
 .road_for_flex {
     display: flex;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .dot {
@@ -324,7 +324,16 @@
     background-color: white;
     border-radius: 50%;
 }
-
+#For_rus .road_map_card{
+    min-height: 630px;
+}
+.for_kripta{
+    position: relative !important;
+    font-size: 18px !important;
+}
+.for_kripta::placeholder{
+    color: white;
+}
 .road_map_card1 h2 {
     font-family: 'Inter', sans-serif;
     font-family: 'Prosto One', sans-serif;
@@ -1071,8 +1080,17 @@
         max-width: 100%;
     }
 }
-
 @media(max-width:480px) {
+    .nav_box2{
+        width: 100%;
+        min-width: auto;
+    }
+    .logo1{
+        width: 150px !important;
+    }
+    .navbar_in button{
+        width: 120px !important;
+    }
     .cont_links3 img {
         margin-left: 0rem !important;
         margin-right: 1rem;
@@ -1164,13 +1182,6 @@
         margin: auto;
     }
 
-    .logo2 {
-        display: flex;
-    }
-
-    .logo1 {
-        display: none;
-    }
 
     .road_map_card {
         width: 93vw;
@@ -1223,7 +1234,7 @@
 
 @media(max-width:560px) {
     .bottom_header_card h2{
-        font-size: 30px !important;
+        font-size: 30px !important  ;
     }
     .cont_links_p p {
         color: #FFF;
@@ -2085,15 +2096,6 @@
         margin-top: 15%;
         padding: 10px;
         margin: auto;
-    }
-
-
-    .logo2 {
-        display: flex;
-    }
-
-    .logo1 {
-        display: none;
     }
 
     .road_map_card {

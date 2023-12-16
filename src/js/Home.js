@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import '../css/Home.css'
 import Logo from '../img/Group 1000003960.png'
 import ang from '../img/United States of America (US).png'
@@ -63,14 +63,34 @@ function engper() {
     localStorage.setItem("lang", "eng")
     window.location.reload()
 }
+
 export default function Home() {
+    const swiperRef = useRef(null);
+
+    useEffect(() => {
+        const swiper = swiperRef.current.swiper;
+    
+        const interval = setInterval(() => {
+          if (swiper) {
+            if (swiper.activeIndex < swiper.slides.length - 1) {
+              swiper.slideNext();
+            } else {
+              swiper.slideTo(0);
+            }
+          }
+        }, 3000);
+    
+        return () => {
+          clearInterval(interval);
+        };
+      }, []);
     function ang_lang() {
         document.querySelectorAll(".for_lang_bottom")[0].style = "display:block"
         document.querySelectorAll(".for_none_lang")[0].style = "display:block"
         document.querySelectorAll(".lang_arrow")[0].style = "transform: rotate(180deg);"
         document.querySelectorAll(".for_lang_bottom")[1].style = "display:block"
         document.querySelectorAll(".for_none_lang")[1].style = "display:block"
-        document.querySelectorAll(".lang_arrow")[1  ].style = "transform: rotate(180deg);"
+        document.querySelectorAll(".lang_arrow")[1].style = "transform: rotate(180deg);"
     }
     function ang_lang_back() {
         document.querySelectorAll(".for_lang_bottom")[0].style = "display:none"
@@ -140,11 +160,11 @@ export default function Home() {
                             </div>
                             {/* <img className='logo2' src={Logo2} alt="" /> */}
                             <ul className='navbar_ul2'>
-                                <li onClick={() => window.location = "#roadmap"}>Roadmap</li>
-                                <li>Tokenomics</li>
-                                <li>FAQ</li>
-                                <li>Contact</li>
-                                <li>Whitepaper</li>
+                                <li onClick={() => {window.location = "#roadmap";document.querySelector(".nav_box2").style="left-900px"}}>Roadmap</li>
+                                <li onClick={() => {window.location = "#tokenomix";document.querySelector(".nav_box2").style="left-900px"}}>Tokenomics</li>
+                                <li onClick={() => {window.location = "#for_back_faq";document.querySelector(".nav_box2").style="left-900px"}}>FAQ</li>
+                                <li onClick={() => {window.location = "#for_back_contact";document.querySelector(".nav_box2").style="left-900px"}}>Contact</li>
+                                <li onClick={() => {window.location = "#roadmap";document.querySelector(".nav_box2").style="left-900px"}}>Whitepaper</li>
                                 <div className="languages">
                                     <div onMouseEnter={() => ang_lang()} className="for_none_lang"></div>
                                     <div onMouseLeave={() => ang_lang_back()} className="for_lang_bottom">
@@ -170,10 +190,10 @@ export default function Home() {
                         <img className='logo2' src={Logo2} alt="" />
                         <ul className='navbar_ul'>
                             <li onClick={() => window.location = "#roadmap"}>Roadmap</li>
-                            <li>Tokenomics</li>
-                            <li>FAQ</li>
-                            <li>Contact</li>
-                            <li>Whitepaper</li>
+                            <li onClick={() => window.location = "#tokenomix"}>Tokenomics</li>
+                            <li onClick={() => window.location = "#for_back_faq"}>FAQ</li>
+                            <li onClick={() => window.location = "#for_back_contact"}>Contact</li>
+                            <li onClick={() => window.location = "#roadmap"}>Whitepaper</li>
                         </ul>
                         <div className="languages">
                             <div onMouseEnter={() => ang_lang()} className="for_none_lang"></div>
@@ -275,7 +295,7 @@ export default function Home() {
                                         <h3 className={s.pay_classes}>Pay with ETH</h3> <h3 className={s.pay_classes}>Max</h3>
                                     </div>
                                     <div className={s.header_bod_a}>
-                                        <p>0</p> <img src={img8} alt="" />
+                                        <p><input className='for_kripta' type="number" placeholder='0' /></p> <img src={img8} alt="" />
                                     </div>
                                 </div>
                                 <div className={s.header_a2}>
@@ -283,7 +303,7 @@ export default function Home() {
                                         <h3 className={s.pay_classes}>Recieve FXM</h3>
                                     </div>
                                     <div className={s.header_bod_a}>
-                                        <p>0</p> <img src={img6} alt="" />
+                                        <p><input className='for_kripta' type="number" placeholder='0' /></p> <img src={img6} alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -297,13 +317,12 @@ export default function Home() {
                     <div className="for_logos">
                         <h3>FEATURED IN:</h3>
                         <Swiper
-                            slidesPerView={3}
-                            spaceBetween={30}
-                            pagination={{
-                                clickable: true,
-                            }
-                            }
+                            slidesPerView={1.5}
+                            centeredSlides={true}
+                            initialSlide={1}
+                            spaceBetween={-50}
                             modules={[Pagination]}
+                            ref={swiperRef}
 
                             className="mySwiper"
                         >
@@ -449,7 +468,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="tokenomix">
+                <div id='tokenomix' className="tokenomix">
                     <div className="main2_div">
                         <div className="Sub_div">
                             <div className="p_mini">
@@ -673,7 +692,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="for_back_faq">
+                <div id='for_back_faq' className="for_back_faq">
                     <section className='faq' id='Faq'>
                         <div className="faq_h1">
                             <h1>Frequently Asked Questions</h1>
@@ -730,7 +749,7 @@ export default function Home() {
                             <img src={faq} alt="" />
                         </div>
                     </section></div>
-                <div className="for_back_contact">
+                <div id='for_back_contact' className="for_back_contact">
                     <section className="contact" id='cont'>
                         <div className="cont_h1">
                             <h1>Our contacts</h1>
@@ -784,7 +803,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div>) : (<div className="Home_main">
+            </div>) : (<div id='For_rus' className="Home_main">
                 <div className="navbar">
                     <div className="navbar_in">
                         <div className="nav_box2">
@@ -794,11 +813,11 @@ export default function Home() {
                             </div>
                             {/* <img className='logo2' src={Logo2} alt="" /> */}
                             <ul className='navbar_ul2'>
-                                <li onClick={() => window.location = "#roadmap"}>Дорожная карта</li>
-                                <li>Токеномика</li>
-                                <li>Вопросы</li>
-                                <li>Контакты</li>
-                                <li>Белая бумага</li>
+                                <li onClick={() => {window.location = "#roadmap";document.querySelector(".nav_box2").style="left-900px"}}>Дорожная карта</li>
+                                <li onClick={() => {window.location ="#tokenomix";document.querySelector(".nav_box2").style="left-900px"}}>Токеномика</li>
+                                <li onClick={()=> {window.location= "#for_back_faq";document.querySelector(".nav_box2").style="left-900px"}}>Вопросы</li>
+                                <li onClick={()=> {window.location= "#for_back_contact";document.querySelector(".nav_box2").style="left-900px"}}>Контакты</li>
+                                <li onClick={()=> {window.location= "#for_back_faq";document.querySelector(".nav_box2").style="left-900px"}}>Белая бумага</li>
                                 <div className="languages">
                                     <div onMouseEnter={() => ang_lang()} className="for_none_lang"></div>
                                     <div onMouseLeave={() => ang_lang_back()} className="for_lang_bottom">
@@ -824,10 +843,10 @@ export default function Home() {
                         <img className='logo2' src={Logo2} alt="" />
                         <ul className='navbar_ul'>
                             <li onClick={() => window.location = "#roadmap"}>Дорожная карта</li>
-                            <li>Токеномика</li>
-                            <li>Вопросы</li>
-                            <li>Контакты</li>
-                            <li>Белая бумага</li>
+                            <li onClick={() => window.location ="#tokenomix"}>Токеномика</li>
+                            <li onClick={()=> window.location= "#for_back_faq"}>Вопросы</li>
+                            <li onClick={()=> window.location= "#for_back_contact"}>Контакты</li>
+                            <li onClick={()=> window.location= "#for_back_faq"}>Белая бумага</li>
                         </ul>
                         <div className="languages">
                             <div onMouseEnter={() => ang_lang()} className="for_none_lang"></div>
@@ -884,7 +903,7 @@ export default function Home() {
                                 </div>
                                 <div className={s.header_stat}>
                                     <h5>0</h5>
-                                    <h6>чрс</h6>
+                                    <h6>час</h6>
                                 </div>
                                 <div className={s.header_stat}>
                                     <h5>0</h5>
@@ -917,7 +936,7 @@ export default function Home() {
                             <div className={s.button_header}>1 FXM = $0,01</div>
                             <div className={s.buttonn_hes}>
                                 <div className={s.buttonn_he}>
-                                    <img src={img7} alt="" />  ЭТХ
+                                    <img src={img7} alt="" />  ETH
                                 </div>
                                 <div className={s.buttonn_he}>
                                     <img src={img8} alt="" /> USDT
@@ -956,6 +975,7 @@ export default function Home() {
                             initialSlide={1}
                             spaceBetween={-50}
                             modules={[Pagination]}
+                            ref={swiperRef}
                             className="mySwiper"
                         >
                             <div className="for_swip_left"></div>
@@ -1024,60 +1044,129 @@ export default function Home() {
                                 <h4>02</h4>
                                 <div className="road_map_card">
                                     <h3>Q1 2024</h3>
-                                    <p>Official release of FlexiMine's mobile and desktop applications.
-                                        Completion of the presale phase and opening of the platform for deposits and staking.
-                                        Enabling the feature for users to withdraw mined funds.
-                                        Implementation of marketing campaigns involving influencers and active promotion on social media.
-                                        Introduction of intelligent AI algorithms to enhance multi-mining.
-                                        Expansion of the customer support team to ensure a high level of service.
-                                        Listing of the FXM token on leading centralized cryptocurrency exchanges (CEX).</p>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Официальный релиз мобильного и десктопного приложений Флексимайн</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Завершение этапа предпродажи (presale) и открытие платформы для депозитов и стейкинга
+</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Включение функции вывода намайненных средств для пользователей</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Реализация маркетинговых кампаний с участием инфлюенсеров и активное продвижение в социальных сетях.
+</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Внедрение интеллектуальных алгоритмов AI для усовершенствования мультимайнинга
+</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Расширение команды поддержки клиентов для обеспечения высокого уровня сервиса
+</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Листинг токена FXM на ведущих централизованных биржах криптовалют (CEX)
+</h5>
+                                    </div>
                                 </div>
                             </div>
                             <div className="road_map_card1">
                                 <h2>03</h2>
                                 <h4>03</h4>
                                 <div className="road_map_card">
-                                    <h3>Q2 2024</h3>
-                                    <p>Intensification of marketing efforts focused on demonstrating successful mining and staking use cases.
-                                        Development of partnerships with major cloud mining providers.
-                                        Strategic partnership with key cryptocurrency exchanges to increase FXM token liquidity.
-                                        Launch of loyalty programs and referral systems to stimulate community growth.
-                                    </p>
+                                    <h3>Q4 2023</h3>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Усиление маркетинговых усилий, направленных на демонстрацию успешных случаев использования майнинга и стейкинга.</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Развитие партнерских отношений с крупными провайдерами облачного майнинга.
+</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Стратегическое партнерство с ключевыми криптовалютными биржами для повышения ликвидности токена FXM</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Запуск программ лояльности и реферальных систем для стимулирования роста сообщества</h5>
+                                    </div>
                                 </div>
                             </div>
                             <div className="road_map_card1">
                                 <h2>04</h2>
                                 <h4>04</h4>
                                 <div className="road_map_card">
-                                    <h3>Q3 2024</h3>
-                                    <p>Optimization of staking functionality on the FlexiMine platform.
-                                        Conducting educational webinars and master classes for users.
-                                        Improvement of analytics tools for tracking mining and staking results.
-                                        Planning and preparation for the platform's expansion into new markets.
-                                    </p>
+                                    <h3>Q4 2023</h3>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Оптимизация функционала стейкинга на платформе Флексимайн</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Проведение образовательных вебинаров и мастер-классов для пользователей</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Улучшение инструментов аналитики для отслеживания результатов майнинга и стейкинга</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Планирование и подготовка к экспансии платформы на новые рынки</h5>
+                                        
+                                    </div>
                                 </div>
                             </div>
                             <div className="road_map_card1">
                                 <h2>05</h2>
                                 <h4>05</h4>
                                 <div className="road_map_card">
-                                    <h3>Q4 2024
-                                    </h3>
-                                    <p>Implementation of new features and improvements in mobile and desktop applications.
-                                        Expansion of the platform's geographic presence in new markets.
-                                        Implementation of advanced measures for the protection of user assets.
-                                        Integration with additional blockchain platforms and DeFi projects.</p>
+                                    <h3>Q4 2023</h3>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Внедрение новых функций и улучшений в мобильном и десктопном приложениях</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Расширение географического присутствия платформы на новых рынках</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Реализация продвинутых мер по защите активов пользователей</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Интеграция с дополнительными блокчейн-платформами и DeFi проектами</h5>
+                                    </div>
                                 </div>
                             </div>
                             <div className="road_map_card1">
                                 <h2>06</h2>
                                 <h4>06</h4>
                                 <div className="road_map_card">
-                                    <h3>Q1 2025
-                                    </h3>
-                                    Launch of new tools for staking a variety of cryptocurrencies.
-                                    Implementation of automatic reinvestment features for mining revenues.
-                                    Expansion of the network of strategic partnerships to strengthen the platform.
+                                    <h3>Q4 2023</h3>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Запуск новых инструментов для стейкинга разнообразных криптовалют</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Реализация функций автоматического реинвестирования доходов от майнинга</h5>
+                                    </div>
+                                    <div className="road_for_flex">
+                                        <div className="dot"></div>
+                                        <h5>Расширение сети стратегических партнерств для укрепления</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1102,7 +1191,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="tokenomix">
+                <div id='tokenomix' className="tokenomix">
                     <div className="main2_div">
                         <div className="Sub_div">
                             <div className="p_mini">
@@ -1317,7 +1406,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="for_back_faq">
+                <div id='for_back_faq' className="for_back_faq">
                     <section className='faq' id='Faq'>
                         <div className="faq_h1">
                             <h1>Часто задаваемые вопросы</h1>
@@ -1374,7 +1463,7 @@ export default function Home() {
                             <img src={faq} alt="" />
                         </div>
                     </section></div>
-                <div className="for_back_contact">
+                <div id='for_back_contact' className="for_back_contact">
                     <section className="contact" id='cont'>
                         <div className="cont_h1">
                             <h1>Наши контакты</h1>
