@@ -74,7 +74,10 @@ export default function Home() {
                 </div>
                 <button>Buy now</button>
                 </div>
-            </div><div className={s.for_header_cent}><img src={headerimg} alt="image" className={s.idea_img} />
+            </div>
+            <div className={s.for_header_cent}><img src={headerimg} alt="image" className={s.idea_img} />
+           
+           
             <header className={s.header_top} >
                 
                     
@@ -154,7 +157,8 @@ Your individual mining power bonus will be calculated at the conclusion of the p
     <h3>Pay with ETH</h3> <h3>Max</h3>
 </div>
 <div className={s.header_bod_a}>
-<p>0</p> <img src={img8} alt="" />
+    <div></div>
+<input placeholder='0' type='number' /> <img src={img8} alt="" style={{position:'relative',zIndex:12,cursor:'pointer'}}  />
 </div>
 </div>
 <div className={s.header_a2}>
@@ -162,7 +166,8 @@ Your individual mining power bonus will be calculated at the conclusion of the p
     <h3>Recieve FXM</h3> 
 </div>
 <div className={s.header_bod_a}>
-<p>0</p> <img src={img6} alt="" />
+    <div></div>
+<input placeholder='0' type='number' /> <img style={{position:'relative',zIndex:12,cursor:'pointer'}} src={img6} alt="" />
 </div>
 </div>
 </div>
