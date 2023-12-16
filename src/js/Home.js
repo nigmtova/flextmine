@@ -22,6 +22,16 @@ import img5 from "../image/Group 1000003496.png"
 import img6 from "../image/FXM.png"
 import img7 from "../image/Icon.png"
 import img8 from "../image/Icon (1).png"
+import faq from '../img/hodlbot.png'
+import vk from '../img/vk.svg'
+import insta from '../img/insta.png'
+import mail from '../img/mail.png'
+import phone from '../img/phone.png'
+import youtube from '../img/youtube.png'
+import telegram from '../img/telegram.svg'
+import Whatsapp from '../img/whatsap.png'
+import map from '../img/map.svg'
+import karta from '../img/karta.png'
 
 
 
@@ -298,6 +308,7 @@ Expansion of the network of strategic partnerships to strengthen the platform.
                     </div>
                 </div>
             </div>
+            <div className="for_back_faq">
             <section className='faq' id='Faq'>
             <div className="faq_h1">
                 <h1>Frequently Asked Questions</h1>
@@ -353,8 +364,8 @@ Expansion of the network of strategic partnerships to strengthen the platform.
                 <div className="faq_dark_purple"></div>
                 <img src={faq} alt="" />
             </div>
-          </section>
-
+          </section></div>
+<div className="for_back_contact">
           <section className="contact" id='cont'>
             <div className="cont_h1">
                 <h1>Our contacts</h1>
@@ -389,6 +400,23 @@ Expansion of the network of strategic partnerships to strengthen the platform.
                 </div>
             </div>
           </section>
+          </div>
+          <div className="for_footer">
+            <div className="for_footer_cent">
+            <div className="for_footer_card">
+            <img src={Logo} alt="" />
+            <p>Copyright 2023 FlexiMine. All Rights Reserved.</p>
+            <p>Disclaimer: Cryptocurrency may be unregulated in your jurisdiction. The value of cryptocurrencies may go down as well as up. Profits may be subject to capital gains or other taxes applicable in your jurisdiction.</p>
+            </div>
+            <div id='for_footer_card1' style={{textAlign:"right",width:"250px"}} className="for_footer_card">
+                <p>PRIVACY POLICY</p>
+                <div className="line_for_footer"></div>
+                <p>COOKIES</p>
+                <div className="line_for_footer"></div>
+                <p>TERMS OF USE</p>
+            </div>
+            </div>
+        </div>
         </div>
     </div>
   )

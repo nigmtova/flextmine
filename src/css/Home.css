@@ -22,7 +22,7 @@
     z-index: 111;
 }
 .navbar_in{
-    max-width: 1400px;
+    max-width: 1300px;
     width: 100%;
     margin: auto;
     display: flex;
@@ -136,7 +136,7 @@ font-family: 'Prosto One', sans-serif;
 font-size: 48px;
 }
 .bottom_header_center{
-    max-width: 1400px;
+    max-width: 1300px;
     width: 100%;
     margin: auto;
 }
@@ -341,7 +341,7 @@ margin-top: 15px;
 line-height: 25px;
 }
 .how_start_cards{
-    max-width: 1400px;
+    max-width: 1300px;
     padding: 15px;
     width: 100%;
     display: flex;
@@ -549,7 +549,6 @@ line-height: 25px;
 #cont {
     width: 100%;
     max-width: 1300px;
-    margin-top: 15% !important;
     margin: auto;
     padding: 20px;
 }
@@ -1329,13 +1328,19 @@ line-height: 25px;
     overflow: hidden;
     transition: 0.5s;
 }
-
+.for_back_faq{
+    background-color: #16151C;
+}
+.for_back_contact{
+    background-color: #16151C;
+    padding-top: 15%;
+}
 .faq {
     position: relative;
     width: 100%;
     max-width: 1300px;
     margin-top: 15%;
-    padding: 20px;
+    padding: 15px;
     margin: auto;
 }
 
@@ -1393,7 +1398,6 @@ line-height: 25px;
 #cont {
     width: 100%;
     max-width: 1300px;
-    margin-top: 15% !important;
     margin: auto;
     padding: 20px;
 }
@@ -1412,7 +1416,7 @@ line-height: 25px;
 .cont_box {
     position: relative;
     width: 100%;
-    max-width: 1240px;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     border-radius: 20px;
@@ -1914,7 +1918,6 @@ line-height: 25px;
     #cont {
         width: 100%;
         max-width: 1300px;
-        margin-top: 15%;
         margin: auto;
         padding: 10px !important;
     }
@@ -1975,4 +1978,27 @@ line-height: 25px;
     .road_map_card{
         width: 90vw;
     }
+}
+.for_footer{
+    background: #16151C;
+    padding-top: 60px;
+}
+.for_footer_card p{
+    color: #CACACA;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 537px;
+    width: 100%;
+    margin-top: 12px;
+    line-height: 21px;
+}
+.for_footer_cent{
+    padding: 15px;
+    margin: auto;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
 }
