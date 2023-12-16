@@ -1,0 +1,22 @@
+.for_footer{
+    background: #16151C;
+}
+.for_footer_card p{
+    color: #CACACA;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 537px;
+    width: 100%;
+    margin-top: 12px;
+    line-height: 21px;
+}
+.for_footer_cent{
+    padding: 15px;
+    margin: auto;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}

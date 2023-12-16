@@ -38,6 +38,7 @@
     font-weight: 400;
     line-height: normal;
     margin-right: 25px;
+    cursor: pointer;
 }
 .eng_lan h2{
     font-size: 18px;
@@ -88,7 +89,10 @@
     position: absolute;
     right: 0;
     top: 30px;
-    background-color: #16151C;
+    border-radius: 20px;
+border: 2px solid #563C72;
+background: linear-gradient(143deg, rgba(13, 13, 13, 0.14) 1.25%, rgba(120, 95, 135, 0.16) 79.53%);
+backdrop-filter: blur(32.5px);
     padding: 15px;
     border-radius: 5px;
     z-index: 11111;
@@ -308,7 +312,7 @@ font-family: 'Prosto One', sans-serif;
 }
 .how_start_card{
     padding: 15px;
-    max-width: 32%;
+    max-width: 32.3%;
     min-height: 417px;
     width: 100%;
     border-radius: 20px;
@@ -319,6 +323,7 @@ backdrop-filter: blur(23.149999618530273px);
 .how_start_card img{
     display: flex;
     margin: auto;
+    margin-bottom: 30px;
 }
 .how_start_card p{
     color: #FFF;
@@ -330,15 +335,18 @@ margin-top: 15px;
 line-height: 25px;
 }
 .how_start_cards{
-    max-width: 1300px;
+    max-width: 1400px;
     padding: 15px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 15px;
     margin: auto;
     margin-top: 50px;
+}
+.line_for_footer{
+    display: none;
 }
 
 
@@ -347,6 +355,11 @@ line-height: 25px;
 
 
 @media(max-width:800px){
+    .for_footer_card p{
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-top: 8px !important;
+    }
     .bottom_header_center{
         display: block;
     }
@@ -370,6 +383,9 @@ line-height: 25px;
     }
 }
 @media(max-width:1000px){
+    .how_start_cards{
+        justify-content: center;
+    }
     .how_start_card{
         max-width: 48%;
     }
@@ -389,6 +405,9 @@ line-height: 25px;
     }
 }
 @media(max-width:480px){
+    .for_footer_cent{
+        display: block !important; 
+    }
     .logo2{
         display: flex;
     }
@@ -406,6 +425,32 @@ line-height: 25px;
     }
     .roadmap_h1{
         font-size: 28px;
+    }
+    #for_footer_card1{
+        text-align: left !important;
+        width: auto !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .for_footer_card p{
+        max-width: 100% !important;
+    }
+    .line_for_footer{
+        display: flex;
+        height: 15px;
+        width: 1.5px;
+        background-color: white;
+    }
+    #for_footer_card1 p{
+        margin-top: 0 !important;
+        width: auto;
+    }
+    #for_footer_card1{
+        margin-top: 25px;
+    }
+    .for_footer_card p{
+        margin-top: 15px !important;
     }
 }
 @media(max-width:560px){
@@ -447,6 +492,27 @@ line-height: 25px;
     }
 }
 @media(min-width:1440px){
+    .for_footer_card p{
+        font-size: 1vw !important;
+        max-width: 33vw !important;
+        line-height: 1.2vw !important;
+    }
+    .for_footer_card img{
+        width: 15vw;
+    }
+    .how_start_card{
+        min-height: 10vw;
+    }
+    .for_footer_cent{
+        max-width: 90vw !important;
+    }
+    .how_start_cards{
+        max-width: 90vw;
+    }
+    .how_start_card p{
+        font-size: 1vw;
+        line-height: 1.2vw;
+    }
     .road_map_cent{
         max-width: 90vw;
     }
@@ -520,6 +586,9 @@ line-height: 25px;
     }
 }
 @media(max-width:380px){
+    .for_footer_card p {
+        font-size: 13px !important;
+    }
     .road_map_card{
         width: 91vw;
     }
