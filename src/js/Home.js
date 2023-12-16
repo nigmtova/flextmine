@@ -948,7 +948,7 @@ export default function Home() {
                                         <h3 className={s.pay_classes}>Купите за ЭТХ</h3> <h3 className={s.pay_classes}>Max</h3>
                                     </div>
                                     <div className={s.header_bod_a}>
-                                        <p>0</p> <img src={img8} alt="" />
+                                        <p><input className='for_kripta' type="number" placeholder='0' /></p> <img src={img8} alt="" />
                                     </div>
                                 </div>
                                 <div className={s.header_a2}>
@@ -956,7 +956,7 @@ export default function Home() {
                                         <h3 className={s.pay_classes}>Получите FXM</h3>
                                     </div>
                                     <div className={s.header_bod_a}>
-                                        <p>0</p> <img src={img6} alt="" />
+                                        <p><input className='for_kripta' type="number" placeholder='0' /></p> <img src={img6} alt="" />
                                     </div>
                                 </div>
                             </div>
