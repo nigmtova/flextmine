@@ -40,6 +40,20 @@ import img12 from "../img/image 67 (1).png";
 import img13 from "../img/image 68.png";
 import img14 from "../img/image 64.png";
 import telegram1 from "../img/telegram.png";
+import logos1 from "../img/logo1 2 (1).png"
+import logos2 from "../img/logo7.png"
+import logos3 from "../img/logo6.png"
+import logos4 from "../img/logo5.png"
+import logos5 from "../img/logo4.png"
+import logos6 from "../img/logo2.png"
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+
+
+// import required modules
+import { Pagination } from 'swiper/modules';
 
 
 export default function Home() {
@@ -214,8 +228,29 @@ Connect wallet
                  </header>
                  <div className="for_logos">
                     <h3>FEATURED IN:</h3>
+                    <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide><img src={logos1} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={logos2} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={logos3} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={logos4} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={logos5} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={logos6} alt="" /></SwiperSlide>
+      </Swiper>
                     <div className="for_logos_images">
-                        <img src="" alt="" />
+                        <img src={logos1} alt="" />
+                        <img src={logos2} alt="" />
+                        <img src={logos3} alt="" />
+                        <img src={logos4} alt="" />
+                        <img src={logos5} alt="" />
+                        <img src={logos6} alt="" />
                     </div>
                  </div>
                   </div>
