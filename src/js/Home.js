@@ -22,6 +22,17 @@ import img5 from "../image/Group 1000003496.png"
 import img6 from "../image/FXM.png"
 import img7 from "../image/Icon.png"
 import img8 from "../image/Icon (1).png"
+import faq from '../img/hodlbot.png'
+import vk from '../img/vk.svg'
+import insta from '../img/insta.png'
+import mail from '../img/mail.png'
+import phone from '../img/phone.png'
+import youtube from '../img/youtube.png'
+import telegram from '../img/telegram.svg'
+import Whatsapp from '../img/whatsap.png'
+import map from '../img/map.svg'
+import karta from '../img/karta.png'
+import { IoClose } from "react-icons/io5";
 
 
 
@@ -38,17 +49,34 @@ export default function Home() {
     }
 
     function menuicon() {
-        document.querySelector(".nav_box2").style = "position: absolute; top:0; left:0;"
+        document.querySelector(".nav_box2").style = "position: fixed; top:0; left:0; transition: 0.5s;"
+    }
+
+    function close2() {
+        document.querySelector(".nav_box2").style = "position: absolute; left:-900px; transition: 1s;"
     }
 
 
 
   return (
-    <div>
+    <div style={{background:"#16151C", overflow:"hidden"}}>
         <div className="Home_main">
             <div className="navbar">
                 <div className="navbar_in">
-                    <div className="nav_box"></div>
+                    <div className="nav_box2">
+                        <div className="nav2_card">
+                            <img className='logo1' src={Logo} alt="" />
+                            <IoClose className='close2' onClick={()=> close2()}/>
+                        </div>
+                        {/* <img className='logo2' src={Logo2} alt="" /> */}
+                        <ul className='navbar_ul2'>
+                            <li onClick={()=>window.location="#roadmap"}>Roadmap</li>
+                            <li>Tokenomics</li>
+                            <li>FAQ</li>
+                            <li>Contact</li>
+                            <li>Whitepaper</li>
+                        </ul>
+                    </div>
                 <IoMenuSharp className='navbar_manu' onClick={()=> menuicon()}/>
                 <img className='logo1' src={Logo} alt="" />
                 <img className='logo2' src={Logo2} alt="" />

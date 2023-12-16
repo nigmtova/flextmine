@@ -29,11 +29,12 @@
     align-items: center;
     justify-content: space-between;
 }
-.navbar ul{
+
+.navbar_ul{
     display: flex;
     list-style: none;
 }
-.navbar ul li{
+.navbar_ul li{
     color: #CACACA;
     font-size: 18px;
     font-style: normal;
@@ -42,6 +43,17 @@
     margin-right: 25px;
     cursor: pointer;
 }
+
+.navbar_ul2 li{
+    color: #CACACA;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
 .eng_lan h2{
     font-size: 18px;
     font-weight: 400;
@@ -371,6 +383,38 @@ line-height: 25px;
 .accordion .contentBx {
     position: relative;
     margin: 20px 20px;
+}
+
+.nav_box2 {
+    position: absolute;
+    left: -800px;
+    min-width: 400px;
+    min-height: 10000px;
+    background: #16151C;
+    padding: 2rem 1rem;
+    display: block;
+}
+
+.nav2_card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.nav2_card .close2 {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar_ul2 li {
+    font-size: 1.2vw;
+    margin-bottom: 1rem !important;
+}
+
+.navbar_ul2 li {
+    display: block;
 }
 
 .contentBx .label {
