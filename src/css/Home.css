@@ -1432,6 +1432,8 @@ line-height: 25px;
 .for_back_contact{
     background-color: #16151C;
     padding-top: 15%;
+    background: linear-gradient(to left, rgb(29, 20, 48), 50%, rgb(22, 21, 28) 80%);
+
 }
 .faq {
     position: relative;
