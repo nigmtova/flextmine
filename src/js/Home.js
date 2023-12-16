@@ -691,11 +691,12 @@ Expansion of the network of strategic partnerships to strengthen the platform.
                             <div className="cont_links_p"><img src={phone} alt="" /><p>+7 937 352-27-75</p></div>
                             <div className="cont_links_p"><img src={mail} alt="" /><p>FlexiMine@gmail.com</p></div>
                             <div className="cont_links_p"><img src={map} alt="" /><p>г. Москва, м.Красносельская, ул. Гаврикова 2\38</p></div>
-                        </div><div className="cont_links2">
+                        </div>
+                        {/* <div className="cont_links2">
                             <p>Telegram</p>
                             <p>Whatsapp</p>
                             <p>Viber</p>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="cont_links3">
                         <p>Наши соц сети:</p>

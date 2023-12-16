@@ -923,6 +923,14 @@ line-height: 25px;
     }
 }
 @media(max-width:480px){
+    .cont_links3 img{
+        margin-left: 0 !important;
+        margin-right: 1rem;
+        margin-top: 15px;   
+    }
+    .cont_links3{
+        display: block !important; 
+    }
     .for_footer_cent{
         display: block !important; 
     }
@@ -1117,6 +1125,10 @@ line-height: 25px;
     }
 }
 @media(max-width:1200px){
+    .cont_right{
+        width: 48vw !important;
+        height: 35vw !important;
+    }
     .navbar_ul{
         display: none !important;
     }
@@ -1640,6 +1652,10 @@ line-height: 25px;
 
 
 @media (max-width:1100px) {
+    .cont_right{
+        width: 100% !important;
+        height: 45vw !important;
+    }
     .cont_box {
         position: relative;
         width: 100%;
@@ -1705,6 +1721,10 @@ line-height: 25px;
     }
 }
 @media(max-width:800px){
+    .cont_right{
+        width: 100% !important;
+        height: 58vw !important;
+    }
     .faq_h1 h1 {
         color: #FFF;
         text-align: center;
@@ -1836,6 +1856,9 @@ line-height: 25px;
     }
 }
 @media(max-width:560px){
+    .cont_links3 p{
+        font-size: 16px;
+    }
     .cont_links_p p {
         color: #FFF;
         font-family: 'Rubik', sans-serif;
@@ -2178,6 +2201,36 @@ line-height: 25px;
   }
   
   @media (min-width: 1440px) {
+    .cont_right{
+        width: 40vw;
+        height: 30vw;
+    }
+    .cont_links_p p{
+        font-size: 1.2vw;
+    }
+    .cont_left{
+        max-width: 40vw;
+    }
+    .cont_links2 p{
+        font-size: 1vw;
+    }
+    .cont_links2{
+        height: 4vw;
+    }
+    .cont_links_p img{
+        width: 3vw;
+        margin-right: 0.8vw;
+    }
+    .cont_links3 p{
+        font-size: 1.2vw;
+    }
+    .cont_links3 img{
+        margin-left: 1.5vw;
+        width: 2.8vw;
+    }
+    #cont{
+        max-width: 90vw;
+    }
     .mini_hs p {
       font-size: 1vw;
     }
