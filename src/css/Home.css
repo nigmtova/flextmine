@@ -2130,6 +2130,12 @@ line-height: 25px;
     .main2_div {
       max-width: 90vw;
     }
+    .faq{
+        max-width: 90vw;
+    }
+    .accordion{
+        max-width: 45vw;
+    }
   }
   
   @media (max-width: 940px) {
