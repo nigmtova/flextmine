@@ -50,6 +50,10 @@ export default function Home() {
         document.querySelector(".lang_arrow").style="transform: rotate(0deg);"
     }
 
+    function menuicon() {
+        document.querySelector(".nav_box2").style = "position: absolute; top:0; left:0;"
+    }
+
 
 
   return (
@@ -57,7 +61,8 @@ export default function Home() {
         <div className="Home_main">
             <div className="navbar">
                 <div className="navbar_in">
-                <IoMenuSharp className='navbar_manu' />
+                    <div className="nav_box"></div>
+                <IoMenuSharp className='navbar_manu' onClick={()=> menuicon()}/>
                 <img className='logo1' src={Logo} alt="" />
                 <img className='logo2' src={Logo2} alt="" />
                 <ul className='navbar_ul'>
