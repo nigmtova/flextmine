@@ -9,7 +9,7 @@ import Logo2 from '../img/logo.png'
 import bottom_header_img from '../img/Blur Mask.png'
 import bottom_header_img1 from '../img/Blur Mask (1).png'
 import hosting1 from "../img/Hosting.png"
-import rasm11 from "../img/feature-1 (1) 2.png"
+import rasm11 from "../img/image 2.png"
 import rasm22 from "../img/image 3.png"
 import rasm33 from "../img/image 1.png"
 import s from "../Header.module.css"
@@ -22,23 +22,10 @@ import img5 from "../image/Group 1000003496.png"
 import img6 from "../image/FXM.png"
 import img7 from "../image/Icon.png"
 import img8 from "../image/Icon (1).png"
-import faq from '../img/hodlbot.png'
-import vk from '../img/vk.svg'
-import insta from '../img/insta.png'
-import mail from '../img/mail.png'
-import phone from '../img/phone.png'
-import youtube from '../img/youtube.png'
-import telegram from '../img/telegram.svg'
-import Whatsapp from '../img/whatsap.png'
-import map from '../img/map.svg'
-import karta from '../img/karta.png'
 
 
 
 export default function Home() {
-    // function accord() {
-
-    // }
     function ang_lang() {
         document.querySelector(".for_lang_bottom").style="display:block"
         document.querySelector(".for_none_lang").style="display:block"
@@ -57,7 +44,7 @@ export default function Home() {
 
 
   return (
-    <div style={{background:"#17161E", overflow:"hidden"}}>
+    <div>
         <div className="Home_main">
             <div className="navbar">
                 <div className="navbar_in">
@@ -66,20 +53,20 @@ export default function Home() {
                 <img className='logo1' src={Logo} alt="" />
                 <img className='logo2' src={Logo2} alt="" />
                 <ul className='navbar_ul'>
-                    <li>Roadmap</li>
+                    <li onClick={()=>window.location="#roadmap"}>Roadmap</li>
                     <li>Tokenomics</li>
                     <li>FAQ</li>
                     <li>Contact</li>
                     <li>Whitepaper</li>
                 </ul>
                 <div className="languages">
-                    <div onMouseEnter={()=> ang_lang()} className="for_none_lang"></div>
+                    <div onMouseEnter={()=> ang_lang()}  className="for_none_lang"></div>
                     <div onMouseLeave={()=>ang_lang_back()} className="for_lang_bottom">
-                        <div id='for_eng_lan' className="for_eng_lan">
+                        <div onClick={()=> localStorage.setItem("lang","rus")} id='for_eng_lan' className="for_eng_lan">
                             <img className='rus' src={rus} alt="" />
                             <h2 className='which_lang'>Rus</h2>
                         </div>
-                        <div className="for_eng_lan">
+                        <div onClick={()=> localStorage.setItem("lang","eng")} className="for_eng_lan">
                             <img className='rus' src={ang} alt="" />
                             <h2 className='which_lang'>Eng</h2>
                         </div>
@@ -92,10 +79,7 @@ export default function Home() {
                 </div>
                 <button>Buy now</button>
                 </div>
-            </div>
-            <div className={s.for_header_cent}><img src={headerimg} alt="image" className={s.idea_img} />
-           
-           
+            </div><div className={s.for_header_cent}><img src={headerimg} alt="image" className={s.idea_img} />
             <header className={s.header_top} >
                 
                     
@@ -118,7 +102,7 @@ Your individual mining power bonus will be calculated at the conclusion of the p
 </div>
 <div className={s.header_video}>
    <div className={s.test_video} id="vid" onClick={()=>{document.querySelector('#vid').style="display:none"}} > <img src={img5}  style={{width:'70px',height:'70px'}} alt="" /></div>
-<iframe width="100%" height="250" src="https://www.youtube.com/embed/CywVrdHIb4Y?si=SE-b7lx3zulf8RYm&amp;controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe className={s.vide_classes} width="100%" height="250" src="https://www.youtube.com/embed/CywVrdHIb4Y?si=SE-b7lx3zulf8RYm&amp;controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </div>
 <div className={s.credit_a}>
@@ -150,15 +134,15 @@ Your individual mining power bonus will be calculated at the conclusion of the p
     <div className={s.opa_2a}>Until Price Increase</div>
     <div className={s.fantasiy}>
         <h1>USDT RAISED: </h1>
-        <h3>$0 / $5 000 000</h3>
+        <h3 className={s.ustd_h3}>$0 / $5 000 000</h3>
     </div>
     <div className={s.fantasiy}>
         <h1>Your purchased FXM:</h1>
-        <h3>0</h3>
+        <h3 className={s.ustd_h3}>0</h3>
     </div>
     <div className={s.fantasiy}>
         <h1>Your Eternal Power Add-on: </h1>
-        <h3>0</h3>
+        <h3 className={s.ustd_h3}>0</h3>
     </div>
     <div className={s.button_header}>1 FXM = $0,01</div>
     <div className={s.buttonn_hes}>
@@ -172,20 +156,18 @@ Your individual mining power bonus will be calculated at the conclusion of the p
 <div className={s.header_a2s}>
 <div className={s.header_a2}>
 <div className={s.header_titile_a}>
-    <h3>Pay with ETH</h3> <h3>Max</h3>
+    <h3 className={s.pay_classes}>Pay with ETH</h3> <h3 className={s.pay_classes}>Max</h3>
 </div>
 <div className={s.header_bod_a}>
-    <div></div>
-<input placeholder='0' type='number' /> <img src={img8} alt="" style={{position:'relative',zIndex:12,cursor:'pointer'}}  />
+<p>0</p> <img src={img8} alt="" />
 </div>
 </div>
 <div className={s.header_a2}>
 <div className={s.header_titile_a}>
-    <h3>Recieve FXM</h3> 
+    <h3 className={s.pay_classes}>Recieve FXM</h3> 
 </div>
 <div className={s.header_bod_a}>
-    <div></div>
-<input placeholder='0' type='number' /> <img style={{position:'relative',zIndex:12,cursor:'pointer'}} src={img6} alt="" />
+<p>0</p> <img src={img6} alt="" />
 </div>
 </div>
 </div>
@@ -195,7 +177,14 @@ Connect wallet
 </div>
    
                
-                 </header> </div>
+                 </header>
+                 <div className="for_logos">
+                    <h3>FEATURED IN:</h3>
+                    <div className="for_logos_images">
+                        <img src="" alt="" />
+                    </div>
+                 </div>
+                  </div>
             <div className="bottom_header">
                 <div className="bottom_header_center">
                 <div className="bottom_header_card">
@@ -209,7 +198,7 @@ Connect wallet
                 </div>
                 </div>
             </div>
-            <div className="roadmap">
+            <div id='roadmap' className="roadmap">
                 <div className="road_map_cent">
                     
                 <center><h1 className='roadmap_h1'>FlexiMine Roadmap</h1></center>
@@ -314,8 +303,7 @@ Expansion of the network of strategic partnerships to strengthen the platform.
                     </div>
                 </div>
             </div>
-
-          <section className='faq' id='Faq'>
+            <section className='faq' id='Faq'>
             <div className="faq_h1">
                 <h1>Frequently Asked Questions</h1>
             </div>
@@ -385,9 +373,7 @@ Expansion of the network of strategic partnerships to strengthen the platform.
                             <div className="cont_links_p"><img src={phone} alt="" /><p>+7 937 352-27-75</p></div>
                             <div className="cont_links_p"><img src={mail} alt="" /><p>FlexiMine@gmail.com</p></div>
                             <div className="cont_links_p"><img src={map} alt="" /><p>г. Москва, м.Красносельская, ул. Гаврикова 2\38</p></div>
-                        </div>
-
-                        <div className="cont_links2">
+                        </div><div className="cont_links2">
                             <p>Telegram</p>
                             <p>Whatsapp</p>
                             <p>Viber</p>
