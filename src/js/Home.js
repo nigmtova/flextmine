@@ -62,6 +62,30 @@ export default function Home() {
         document.querySelector(".nav_box2").style = "position: absolute; left:-900px; transition: 1s;"
     }
 
+    function accardion1() {
+      document.querySelector(".content").classList.toggle("accardion2")
+    }
+
+    function accardion2() {
+      document.querySelector(".content2").classList.toggle("accardion3")
+    }
+
+    function accardion3() {
+      document.querySelector(".content3").classList.toggle("accardion4")
+    }
+    function accardion4() {
+      document.querySelector(".content4").classList.toggle("accardion5")
+    }
+
+
+    function accardion5() {
+      document.querySelector(".content5").classList.toggle("accardion6")
+    }
+
+    function accardion6() {
+      document.querySelector(".content6").classList.toggle("accardion7")
+    }
+    
 
 
   return (
@@ -571,42 +595,42 @@ Expansion of the network of strategic partnerships to strengthen the platform.
                 <div className="faq_blue"></div>
                 <div className="faq_pink"></div>
                 <div className="faq_purple"></div>
-                <div className="contentBx">
+                <div onClick={()=> accardion1()} className="contentBx">
                     <div className="label">What is FlexiMine?</div>
                     <div className="content">
                         <p>FlexiMine is an innovative platform for cryptocurrency mining and staking, combining the advantages of cloud mining with artificial intelligence. Users can choose cryptocurrencies for mining, such as Bitcoin or Dogecoin, and participate in staking. It is also possible to use AI for automatically selecting the most profitable options for mining and staking.</p>
                     </div>
                 </div>
 
-                <div className="contentBx">
+                <div onClick={()=> accardion2()} className="contentBx">
                     <div className="label">How can I buy FXM tokens?</div>
                     <div className="content2">
                         <p>FXM tokens are available for purchase on our official website fleximine.com using cryptocurrencies such as USDT or Ethereum.</p>
                     </div>
                 </div>
 
-                <div className="contentBx">
+                <div onClick={()=> accardion3()} className="contentBx">
                     <div className="label">What makes FlexiMine unique?</div>
                     <div className="content3">
                         <p>FlexiMine offers a unique mining opportunity by using any cryptocurrency as mining power under collateral. This innovation is a first in the crypto industry.</p>
                     </div>
                 </div>
 
-                <div className="contentBx">
+                <div onClick={()=> accardion4()} className="contentBx">
                     <div className="label">How does staking work in FlexiMine?</div>
                     <div className="content4">
                         <p>In FlexiMine, users can stake any cryptocurrency that supports staking, within a unified ecosystem.</p>
                     </div>
                 </div>
 
-                <div className="contentBx">
+                <div onClick={()=> accardion5()} className="contentBx">
                     <div className="label">What are the benefits for FXM presale participants?</div>
                     <div className="content5">
                         <p>Participants in the presale will receive a lifetime bonus in mining power, which will be individually calculated after the end of the presale.</p>
                     </div>
                 </div>
 
-                <div className="contentBx">
+                <div onClick={()=> accardion6()} className="contentBx">
                     <div className="label">How does FlexiMine ensure security and transparency?</div>
                     <div className="content6">
                         <p>FlexiMine utilizes state-of-the-art security technologies and provides users with full control over their investments and mining activities.</p>
