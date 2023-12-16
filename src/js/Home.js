@@ -158,7 +158,7 @@ Your individual mining power bonus will be calculated at the conclusion of the p
 </div>
 <div className={s.header_bod_a}>
     <div></div>
-<input placeholder='0' type='number' /> <img src={img8} alt="" />
+<input placeholder='0' type='number' /> <img src={img8} alt="" style={{position:'relative',zIndex:12,cursor:'pointer'}}  />
 </div>
 </div>
 <div className={s.header_a2}>
@@ -167,7 +167,7 @@ Your individual mining power bonus will be calculated at the conclusion of the p
 </div>
 <div className={s.header_bod_a}>
     <div></div>
-<input placeholder='0' type='number' /> <img style={{position:'relative',zIndex:12}} src={img6} alt="" />
+<input placeholder='0' type='number' /> <img style={{position:'relative',zIndex:12,cursor:'pointer'}} src={img6} alt="" />
 </div>
 </div>
 </div>
