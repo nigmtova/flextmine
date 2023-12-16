@@ -74,7 +74,10 @@ export default function Home() {
                 </div>
                 <button>Buy now</button>
                 </div>
-            </div><div className={s.for_header_cent}><img src={headerimg} alt="image" className={s.idea_img} />
+            </div>
+            <div className={s.for_header_cent}><img src={headerimg} alt="image" className={s.idea_img} />
+           
+           
             <header className={s.header_top} >
                 
                     
