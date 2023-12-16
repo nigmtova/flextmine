@@ -165,7 +165,8 @@ Your individual mining power bonus will be calculated at the conclusion of the p
     <h3>Recieve FXM</h3> 
 </div>
 <div className={s.header_bod_a}>
-<p>0</p> <img src={img6} alt="" />
+    <div></div>
+<input placeholder='0' type='number' /> <img style={{position:'relative',zIndex:12}} src={img6} alt="" />
 </div>
 </div>
 </div>
