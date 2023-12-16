@@ -2413,3 +2413,43 @@ line-height: 25px;
        top: -40px ;
        z-index: 1111;
   } */
+
+  .mySwiper2 {
+    display: none !important;
+  }
+
+  @media(max-width: 750px) {
+    .mySwiper2 {
+        display: flex !important;
+        align-items: center;
+    }
+    .mySwiper {
+        display: none !important;
+    }
+    .for_logos_images {
+        display: none;
+    }
+  }
+
+  .mySwiper2 SwiperSlide {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 10px !important;
+  }
+
+  .mySwiper2 SwiperSlide img {
+    width: 25% !important;
+    margin-top: 10px;
+  }
+
+  .swiper-wrapper {
+    align-items: center !important;
+  }
+
+  @media(max-width: 576px) {
+    .mySwiper2 SwiperSlide img {
+        width: 3vw !important;
+      }
+  }

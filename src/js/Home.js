@@ -270,6 +270,23 @@ export default function Home() {
               <SwiperSlide><img src={logos5} alt="" /></SwiperSlide>
               <SwiperSlide><img src={logos6} alt="" /></SwiperSlide>
             </Swiper>
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={3}
+              centeredSlides={true}
+              // pagination={{
+              //   clickable: true,
+              // }}
+              // modules={[Pagination]}
+              className="mySwiper2"
+            >
+            <SwiperSlide><img style={{width: '170px'}} src={logos1} alt="" /></SwiperSlide>
+            <SwiperSlide><img style={{width: '170px'}} src={logos2} alt="" /></SwiperSlide>
+            <SwiperSlide><img style={{width: '170px'}} src={logos3} alt="" /></SwiperSlide>
+            <SwiperSlide><img style={{width: '170px'}} src={logos4} alt="" /></SwiperSlide>
+            <SwiperSlide><img style={{width: '170px'}} src={logos5} alt="" /></SwiperSlide>
+            <SwiperSlide><img style={{width: '170px'}} src={logos6} alt="" /></SwiperSlide>
+            </Swiper>
             <div className="for_logos_images">
               <img src={logos1} alt="" />
               <img src={logos2} alt="" />
