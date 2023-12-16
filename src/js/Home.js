@@ -1509,11 +1509,9 @@ export default function Home() {
                             <p>Дисклеймер: криптовалюта может быть нерегулируемой в вашей юрисдикции. Стоимость криптовалют может как падать, так и расти. Прибыль может облагаться налогом на прирост капитала или другими налогами, действующими в вашей юрисдикции.</p>
                         </div>
                         <div id='for_footer_card1' style={{ textAlign: "right", width: "250px" }} className="for_footer_card">
-                            <p>PRIVACY POLICY</p>
-                            <div className="line_for_footer"></div>
-                            <p>COOKIES</p>
-                            <div className="line_for_footer"></div>
-                            <p>TERMS OF USE</p>
+                        <p>ПОЛИТИКА КОНФЕДЕНЦИАЛЬНОСТИ</p>
+                            <p>ФАЙЛФ COOKIES</p>
+                            <p>ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</p>
                         </div>
                     </div>
                 </div>

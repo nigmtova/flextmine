@@ -1081,6 +1081,12 @@
     }
 }
 @media(max-width:480px) {
+    #For_rus #for_footer_card1{
+        display: block !important; 
+    }
+    #For_rus #for_footer_card1 p{
+        margin-top: 7px !important;
+    }
     .nav_box2{
         width: 100%;
         min-width: auto;
