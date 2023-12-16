@@ -384,9 +384,9 @@ color: white;
         position: relative;
         z-index: 12;
     }
-    .text_a{width: 96%;margin-top: 50px;}
+    .text_a{width: 100%;margin-top: 50px;}
     .credit_a{
-        width: 96%;
+        width: 100%;
     }
     .header_top{
         padding-bottom: 20px;

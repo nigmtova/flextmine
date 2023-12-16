@@ -409,14 +409,32 @@ line-height: 25px;
 }
 
 .navbar_ul2 li {
-    font-size: 1.2vw;
+    font-size: 18px;
     margin-bottom: 1rem !important;
 }
 
 .navbar_ul2 li {
     display: block;
 }
-
+.for_logos{
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    padding-top: 0;
+}
+.for_logos_images{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.for_logos h3{
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 .contentBx .label {
     position: relative;
     color: #FFF;
@@ -2259,7 +2277,7 @@ line-height: 25px;
     justify-content: space-between;
     width: 40%;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 50px;
   }
   
   .Hash_tag img {
@@ -2314,8 +2332,22 @@ line-height: 25px;
   .image_contact {
     text-align: center;
   }
-  
-  
+  @media(max-width:1300px){
+    .for_logos_images img{
+        width: 12vw;
+        height: 2.5vw;
+    }
+  }
+  @media(max-width:750px){
+
+  }
+  .swiper-slide{
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .swiper-slide img{
+    width: 100%;
+  }
   /* 
   .image_contact{
       position: relative;
