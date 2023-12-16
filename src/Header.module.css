@@ -412,9 +412,9 @@ color: white;
 }
 @media(max-width:480px){
     
-    .text_a{width: 92%;margin-top: 50px;}
+    .text_a{width: 100%;margin-top: 50px;}
     .credit_a{
-        width: 92%;
+        width: 100%;
     }
     .header_a2s{
         display: block;
